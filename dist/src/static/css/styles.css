@@ -1,0 +1,272 @@
+:root {
+  --primary-color: #;
+  --secondary-color: #;
+  --success-color: #28A745;
+  /* add rest */
+  --header-color: #0066ff;
+  --header-text-color: #ffffff;
+  --font-color: #000000;
+  --shadow-color: #999;
+  --accent-color: #f2f2ff;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body::-webkit-scrollbar-button {
+  display: none;
+}
+
+body {
+  background-color: rgb(139, 69, 197);
+  -ms-overflow-style: none;
+}
+
+.toast {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  z-index: 1050;
+}
+
+.navbar-brand {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.material-icons {
+  font-size: 28px;
+}
+
+#timenow {
+  font-size: 15px;
+}
+
+#notif {
+  z-index: 500;
+  box-shadow: 0px 0px 2px 1px #888888;
+  width: 25%;
+  min-height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+  filter: brightness(90%);
+}
+
+#startmenu {
+  z-index: 500;
+  box-shadow: 0px 0px 2px 1px #888888;
+  width: 25%;
+  min-height: 50%;
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  display: none;
+}
+
+.selected {
+  background-color: #6c757d;
+}
+
+.window {
+  position: absolute;
+  width: 45%;
+  height: 45%;
+  top: 25%;
+  left: 25%;
+  margin: 0;
+  padding: 0;
+  z-index: 99;
+  border: 1px solid purple;
+  box-shadow: 0px 0px 2px 1px #888888;
+}
+
+.windowhead {
+  background-color: purple;
+  max-height: 32px;
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+}
+
+.apps, .minwindow, .closewindow {
+  cursor: pointer;
+}
+
+.pad {
+  height: calc(100% - 32px);
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#ghostpane {
+  background: #999;
+  opacity: 0.2;
+  height: 0px;
+  width: 0px;
+  top: 20%;
+  left: 20%;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  z-index: 98;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+/* TicTacToe css below */
+
+#game {
+  height: 325px;
+  width: 220px;
+}
+
+#game2 {
+  height: 550px;
+  width: 500px;
+}
+
+.game--container {
+  padding: 10%;
+  display: grid;
+  width: 0%;
+  height: 0%;
+  grid-template-columns: auto auto auto;
+  border-style: none;
+}
+
+.cell {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 400;
+  border: 1px solid white;
+  transition: background 0.2s ease-in-out;
+  color: white;
+}
+
+.cell:hover {
+  cursor: pointer;
+  background: white;
+  color: #28A745;
+}
+
+.occupied:hover {
+  background: #ff3a3a;
+}
+
+.win {
+  background: #6774ee;
+}
+
+.win:hover {
+  background: #6774ee;
+}
+
+#cell_0, #cell_1, #cell_2 {
+  border-top: none;
+}
+
+#cell_0, #cell_3, #cell_6 {
+  border-left: none;
+}
+
+#cell_6, #cell_7, #cell_8 {
+  border-bottom: none;
+}
+
+#cell_2, #cell_5, #cell_8 {
+  border-right: none;
+}
+
+.game--status {
+  top: 32px;
+}
+
+.game--btn {
+  top: 32px;
+}
+
+#proglist {
+  display: block;
+}
+
+#console, #console:before, #console:after {
+  box-sizing: border-box;
+}
+
+#term {
+  outline: none;
+  resize: none;
+  height: calc(100% - 32px);
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: auto;
+  /* overflow: auto; */
+}
+
+.terminalCont {
+  /* background: black; */
+  width: 100%;
+  border-radius: 4px;
+  padding: 12px 0 0 0;
+  margin-top: -20px;
+  font-family: 'Roboto Mono', monospace;
+  /* opacity: 0; */
+}
+
+.userEnteredText {
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+#terminalReslutsCont {
+  width: 100%;
+  /* height: calc(100% - 32px); */
+  padding: 12px;
+  overflow-y: auto;
+  resize: none;
+  border: none;
+  font-size: 14px;
+  line-height: 28px;
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#terminalReslutsCont a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+
+#terminalReslutsCont a:hover {
+  text-decoration: underline;
+}
+
+#terminalTextInput {
+  background: black;
+  display: block;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0 0 4px 4px;
+  width: 100%;
+  color: white;
+  padding: 18px;
+  font-size: 14px;
+  outline: none;
+  font-family: 'Roboto Mono', monospace;
+}
+
+canvas {
+  border: 1px solid white;
+}
